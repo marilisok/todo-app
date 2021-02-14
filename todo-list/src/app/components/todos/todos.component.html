@@ -1,0 +1,33 @@
+<div>
+  <form action="#" (ngSubmit)="add()">
+    <input class="title" type="text" name="title" [(ngModel)]="title">
+    <button [disabled]="!title" (click)="add()" class="btn btn-primary">Добавить новую задачу</button>
+  </form>
+
+  <div id="tasks">
+
+    <div id="not_complete">
+      <h3>Невыполненные задачи</h3>
+      <div *ngFor="let todo of todos">
+      <span *ngIf="!todo.completed">
+         <input type="checkbox" [checked]="todo.completed" (change)="onComplete(todo.id)">
+         <input class="title" name="title" [(ngModel)]="todo.title" placeholder="Задача" required>
+        <button (click)="delete(todo.id)" class="btn btn-danger">remove</button>
+        <button (click)="edit(todo.id)" [disabled]="!todo.title" class="btn btn-success">edit</button>
+      </span>
+      </div>
+    </div>
+
+    <div id="complete">
+      <h3>Выполненные задачи</h3>
+      <div *ngFor="let todo of todos">
+      <span *ngIf="todo.completed">
+        <input type="checkbox" [checked]="todo.completed" (change)="onComplete(todo.id)">
+        <del>{{todo.title}}</del>
+        <button (click)="delete(todo.id)" class="btn btn-danger">remove</button>
+      </span>
+      </div>
+    </div>
+  </div>
+
+</div>

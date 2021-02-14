@@ -1,0 +1,23 @@
+#tasks{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+form{
+  text-align: center;
+}
+
+.title{
+  width: 450px;
+  height: 35px;
+}
+
+button{
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+[type = "checkbox"]{
+  margin-right: 10px;
+}
