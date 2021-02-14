@@ -9,3 +9,6 @@ npm install
 node ./backend/app.js
 
 ng serve --open --port 3030
+
+## Скринкаст работы приложения
+[![Watch the video](./screen-video/lab2.png)](https://youtu.be/ta3c9wD_-Jo)
